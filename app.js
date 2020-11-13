@@ -1,42 +1,49 @@
+import { config } from './config.js';
 const getGitDetails = async () => {
-    const req = await fetch('https://api.github.com/graphql', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer 8ab67862d5440f75e7ae8d27397a345d48ac6291`,
-        },
-        body: JSON.stringify({
-            query: `
-            query
+    try {
+        const req = await fetch('https://api.github.com/graphql', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: config.api,
+            },
+            body: JSON.stringify({
+                query: `
+                query
 
-{
-  viewer {
-    name
-    login
-    bio
-    avatarUrl
-    repositories(last: 20) {
-      nodes {
+    {
+      viewer {
         name
-        description
-        primaryLanguage {
-          color
-          name
+        login
+        bio
+        avatarUrl
+        repositories(last: 20) {
+            totalCount
+          nodes {
+            name
+            description
+            primaryLanguage {
+              color
+              name
+            }
+            updatedAt
+            forkCount
+            stargazerCount
+          }
+
         }
-        updatedAt
-
       }
-
     }
-  }
-}
-            `,
-        }),
-    });
-    const res = await req.json();
-    const details = res.data.viewer;
-    console.log(details);
-    return details;
+                `,
+            }),
+        });
+        const res = await req.json();
+        const details = res.data.viewer;
+        console.log(details);
+        return details;
+    } catch (error) {
+        console.error(error);
+    }
 };
 
 getGitDetails();

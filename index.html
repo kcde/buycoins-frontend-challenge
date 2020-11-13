@@ -13,6 +13,155 @@
         <title>GitHub Profile</title>
     </head>
     <body>
-        <script src="./app.js"></script>
+        <header>
+            <nav class="header-nav">
+                <i class="fas fa-bars hamburger icon"></i>
+                <div class="main-nav">
+                    <div class="logo">
+                        <img src="./logo.png" alt="github logo" />
+                    </div>
+                    <form class="search-form mobile-display">
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Search or jump to..."
+                            aria-label="search"
+                        />
+                    </form>
+
+                    <div class="links mobile-display">
+                        <a href="#">Pulls</a>
+                        <a href="#">Issues</a>
+                        <a href="#">Marketplace</a>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+
+                <div class="nav-util">
+                    <div class="notif">
+                        <i class="far fa-bell icon"></i>
+                    </div>
+                    <div class="repo-add mobile-display">
+                        <i class="fas fa-plus icon"></i>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="nav-photo mobile-display">
+                        <img src="./20605825.jpg" alt="my photo" />
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="user-details split">
+                    <div class="user-id">
+                        <div class="user-photo">
+                            <img src="./20605825.jpg" alt="user photo" />
+                            <div class="mobile-display status-icon">
+                                <i class="far fa-smile"></i>
+                            </div>
+                        </div>
+                        <div class="user-name">
+                            <p class="full-name">Keside Ezeala</p>
+                            <p class="username">kcde</p>
+                        </div>
+                    </div>
+                    <div class="status">
+                        <p><i class="far fa-smile"></i> Set status</p>
+                    </div>
+                    <div class="bio">
+                        <p class="bio-message">
+                            I'm a mysterious individual who is yet to fill out his bio. One thing's
+                            for certain: I write front-end code! For now!
+                        </p>
+                    </div>
+                </div>
+                <div class="repos-info split">
+                    <nav class="repos-nav">
+                        <a href="#"><i class="fas fa-book-open icon"></i>Overview </a>
+                        <a href="#" class="active flex ai-c"
+                            ><i class="fas fa-bookmark icon"></i>
+                            <p>Repositories</p>
+                            <div class="repo-count">45</div>
+                        </a>
+                        <a href="#"> <i class="far fa-chart-bar icon"></i>Projects</a>
+                        <a href="#"><i class="fas fa-box icon"></i>Packages</a>
+                    </nav>
+
+                    <form class="search-form">
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Find a repository..."
+                            aria-label="search"
+                        />
+                    </form>
+
+                    <div class="repo">
+                        <div class="repo-left split">
+                            <a href="#" class="repo-name">Repo name</a>
+                            <p class="repo-desc">repo desc</p>
+                            <div class="repo-info">
+                                <div class="main-language flex ai-c">
+                                    <i class="fas fa-circle language-color icon"></i>
+                                    <p class="language">Javascript</p>
+                                </div>
+                                <div class="repo-star flex ai-c">
+                                    <i class="far fa-star icon"></i>
+                                    <p class="star-count">44</p>
+                                </div>
+
+                                <div class="repo-fork flex ai-c">
+                                    <i class="fas fa-code-branch icon"></i>
+                                    <p class="fork-count">5</p>
+                                </div>
+
+                                <p class="repo-update">updated 15 dec</p>
+                            </div>
+                        </div>
+
+                        <div class="repo-right">
+                            <div class="star-repo flex ai-c">
+                                <i class="far fa-star icon"></i>
+                                <p>Star</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="repo">
+                        <div class="repo-left split">
+                            <a href="#" class="repo-name">Repo name</a>
+                            <p class="repo-desc">repo desc</p>
+                            <div class="repo-info">
+                                <div class="main-language flex ai-c">
+                                    <i class="fas fa-circle language-color icon"></i>
+                                    <p class="language">Javascript</p>
+                                </div>
+                                <div class="repo-star flex ai-c">
+                                    <i class="far fa-star icon"></i>
+                                    <p class="star-count">44</p>
+                                </div>
+
+                                <div class="repo-fork flex ai-c">
+                                    <i class="fas fa-code-branch icon"></i>
+                                    <p class="fork-count">5</p>
+                                </div>
+
+                                <p class="repo-update">updated 15 dec</p>
+                            </div>
+                        </div>
+
+                        <div class="repo-right">
+                            <div class="star-repo flex ai-c">
+                                <i class="far fa-star icon"></i>
+                                <p>Star</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="app.js"></script>
     </body>
 </html>
