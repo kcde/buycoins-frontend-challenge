@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+input {
+    font-size: 1rem;
+}
+
 /* HELPER CLASSES */
 .mobile-display {
     display: none;
