@@ -1,11 +1,13 @@
 import { config } from './config.js';
+
+console.log(config.a + config.b);
 const getGitDetails = async () => {
     try {
         const req = await fetch('https://api.github.com/graphql', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: config.api,
+                Authorization: 'Bearer ' + config.a + config.b,
             },
             body: JSON.stringify({
                 query: `
